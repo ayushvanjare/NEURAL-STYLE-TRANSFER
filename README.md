@@ -15,89 +15,107 @@
 ---
 
 ## 📌 About the Project
-This project focuses on implementing a **Machine Learning / NLP technique** to solve a real-world problem.
+This project implements a basic **Image Style Transfer** technique using **PyTorch**.
 
-The system processes input data, applies preprocessing techniques, and uses a trained model to generate predictions or outputs.
+It combines:
+- 🖼️ **Content Image** (structure)
+- 🎨 **Style Image** (artistic style)
+
+to generate a new stylized output image.
 
 ---
 
 ## ✨ Key Features
-- 🔹 Data preprocessing and cleaning  
-- 🔹 Feature extraction  
-- 🔹 Model training and evaluation  
-- 🔹 Prediction generation  
-- 🔹 Visualization (if applicable)  
+- 🖼️ Load and preprocess images  
+- 🎨 Combine content and style  
+- ⚡ Optimization using gradient descent  
+- 🔥 Implemented using PyTorch tensors  
+- 📊 Output visualization using Matplotlib  
 
 ---
 
 ## 🛠️ Tech Stack
 - **Language:** Python 3  
 - **Libraries:**  
-  - NumPy  
-  - Pandas  
+  - PyTorch  
+  - Torchvision  
+  - PIL (Python Imaging Library)  
   - Matplotlib  
-  - Scikit-learn  
-- **Environment:** Jupyter Notebook  
 
 ---
 
 ## 📁 Project Structure
 
-📦 Task-3-Project
+📦 Image-Style-Transfer
 
-  ┣ 📜 Task_3.ipynb
+┣ 📜 Task_3.ipynb
 
-  ┗ 📜 README.md
+┣ 🖼️ content.jpeg
 
+┣ 🎨 style.jpeg
+
+┣ 🖼️ output.jpg
+
+┗ 📜 README.md
 
 ---
 
 ## ⚙️ Setup & Installation
 
-###1️⃣Install Dependencies
+### 1️⃣ Install Dependencies
 
-pip install numpy pandas matplotlib scikit-learn
+pip install torch torchvision pillow matplotlib
 
 ▶️ How It Works
 
-Load dataset
+Load content and style images
 
-Perform data preprocessing
+Resize and convert images to tensors
 
-Extract features
+Initialize output image
 
-Train machine learning model
+Define loss function:
 
-Evaluate model performance
+Content Loss
 
-Generate predictions
+Style Loss
 
-📊 Example Output
+Optimize using Adam optimizer
 
-Model Accuracy: 92%
+Generate final stylized image
 
-Prediction: Positive
+💻 Code Overview
 
+Image loading using PIL
 
-🧠 Model Used
+Transformations using Torchvision
 
-Supervised Learning Algorithm (e.g., Logistic Regression / Decision Tree / SVM)
+Optimization using PyTorch
+
+Visualization using Matplotlib
+
+📊 Example Workflow
+
+Content Image + Style Image → Optimization → Stylized Output
 
 ⚠️ Limitations
 
-Depends on dataset quality
+Basic implementation (not true neural style transfer)
 
-May not generalize well to unseen data
+Uses simple pixel-wise loss instead of feature-based loss
 
-Requires parameter tuning
+Output quality may be limited
+
+Requires tuning for better results
 
 🔮 Future Enhancements
 
-🚀 Use deep learning models
+🚀 Use VGG19 for feature extraction
 
-🚀 Improve accuracy with hyperparameter tuning
+🚀 Implement true Neural Style Transfer
 
-🚀 Deploy as a web app
+🚀 Improve output quality
 
-🚀 Add real-time predictions
+🚀 Add real-time style transfer
 
+🚀 Build web app using Streamlit
